@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+    body {
+        font-family: 'Fredoka One', cursive;
+        margin: 0px;
+        padding: 0px;
+        background: url('pic5.jpg') center/cover no-repeat fixed;
+        height: 0px;
+    }
+
+    .left {
+        left: 20px;
+        top: 20px;
+        display: inline-block;
+        /* border: 2px solid red;*/
+    }
+
+    .left img {
+        width: 150px;
+        /*filter:;*/
+    }
+
+    .left div {
+        line-height: 5px;
+        font-size: 15px;
+        color: white;
+        text-align: center;
+    }
+
+    .mid {
+        display: inline;
+        width: 33%;
+        margin: 12px auto;
+        /*  border: 2px solid green; */
+    }
+
+    .right {
+        position: absolute;
+        top: 23px;
+        display: inline-block;
+        /*  border: 2px solid yellow; */
+    }
+
+    .bt {
+        font-family: 'Fredoka One', cursive;
+        margin: 0px 9px;
+        background-color: black;
+        color: aliceblue;
+        padding: 3px 5px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .bt1{
+        font-family: 'Fredoka One', cursive;
+        margin-left: 61px;
+        background-color: black;
+        color: aliceblue;
+        padding: 3px 5px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+        width: 210px;
+        margin-top: 3px;
+    }
+    .bt:hover {
+        background-color: rgb(141, 38, 38);
+    }
+
+    .bt1:hover {
+        background-color: rgb(141, 38, 38);
+    }
+
+    .navbar {
+        display: inline-block;
+        margin-left: 46px;
+
+    }
+
+    .navbar li {
+        font-size: 25px;
+        display: inline-block;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+    }
+
+    .navbar li a:hover, .navbar li a.active {
+        color: rgba(148, 8, 8, 0.815);
+        text-decoration: underline;
+    }
+
+    .container {
+        border: 3px solid goldenrod;
+        margin: 78px 113px;
+        width: 201px;
+        padding: 53px 163px;
+        border-radius: 25px;
+        text-align: center;
+        color: rgba(221, 145, 145, 0.815);
+    }
+
+    .container button {
+
+    }
+
+    .form-group input {
+        font-family: 'Fredoka One', cursive;
+        text-align: center;
+        display: block;
+        width: 325px;
+        padding: 7px;
+        border: 2px solid black;
+        margin: 6px auto;
+    }
+    .form{
+        margin-left: -60px;
+    }
+
+</style>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="gymhub.jpg.jpeg" alt="">
+            <div>FITNESS CLUB</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="home.html" class="active">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="membership.html">MEMBERSHIP</a></li>
+                  <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="bt">CONTACT US</button>
+            <button class="bt">EMAIL US</button>
+        </div>
+    </header>
+    <div class="container">
+        JOIN THE BEST GYM OF MUMBAI
+        <form action="backend.php">
+            <div class="form">
+
+                <div class="form-group">
+                    <input type="text" name="" placeholder="ENTER YOUR NAME: ">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="ENTER YOUR PHONE NUMBER: ">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="ENTER YOUR EMAIL ID: ">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="ENTER YOUR AGE: ">
+                </div>
+                <button class="bt1">SUBMIT</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

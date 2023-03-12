@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+    body {
+        font-family: 'Fredoka One', cursive;
+        margin: 0px;
+        padding: 0px;
+        background: url('pic10.jpg') center/cover no-repeat fixed;
+
+    }
+
+    .container {
+        /* background-image: linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4)); */
+        /* background: url('pic2.jpg') center/cover no-repeat fixed; */
+        /* height: 100%; */
+        height: 500vh;
+        width: 100%;
+        background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4));
+        position: absolute;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .left {
+        left: 20px;
+        top: 20px;
+        display: inline-block;
+        /* border: 2px solid red;*/
+    }
+
+    .left img {
+        width: 150px;
+        /*filter:;*/
+    }
+
+    .left div {
+        line-height: 5px;
+        font-size: 15px;
+        color: white;
+        text-align: center;
+    }
+
+    .mid {
+        display: inline;
+        width: 33%;
+        margin: 12px auto;
+        /*  border: 2px solid green; */
+    }
+
+    .right {
+        position: absolute;
+        top: 23px;
+        display: inline-block;
+        /*  border: 2px solid yellow; */
+    }
+
+    .bt {
+        font-family: 'Fredoka One', cursive;
+        margin: 0px 9px;
+        background-color: black;
+        color: aliceblue;
+        padding: 3px 5px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .bt:hover {
+        background-color: rgb(141, 38, 38);
+    }
+
+    .navbar {
+        display: inline-block;
+        margin-left: 46px;
+
+    }
+
+    .navbar li {
+        font-size: 25px;
+        display: inline-block;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        color: rgba(148, 8, 8, 0.815);
+        text-decoration: underline;
+    }
+
+    .form-box {
+        width: 404px;
+        height: 433px;
+        position: relative;
+        margin: 4% auto;
+        background: #fff;
+        padding: 20px;
+        /* overflow: hidden; */
+    }
+
+    .button-box {
+        width: 58%;
+        margin: 35px auto;
+        position: relative;
+        box-shadow: 0 0 20px 9px #ff61241f;
+        border-radius: 30px;
+    }
+
+    .toggel-btn {
+        padding: 10px 30px;
+        cursor: pointer;
+        border: 0;
+        outline: none;
+        position: relative;
+        background: transparent;
+    }
+
+    #btn {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: linear-gradient(to right, #ff105f, #ffad06);
+        width: 50%;
+        height: 100%;
+        border-radius: 30px;
+        transition: .5s;
+    }
+
+    .input-group {
+        top: 169px;
+        position: absolute;
+        width: 197px;
+        transition: .5s;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 10px 0;
+        margin: 6px 100px;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid #999;
+        outline: none;
+        background: transparent;
+    }
+
+    .submit-btn {
+        width: 85%;
+        padding: 12px 51px;
+        cursor: pointer;
+        display: block;
+        margin-left: 114px;
+        margin-top: 21px;
+        text-align: center;
+        background: linear-gradient(to right, #ff105f, #ffad06);
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+    }
+    .chech-box{
+        margin: 30px 10px 30px 0;
+    }
+    span{
+        color: #777;
+        font-size: 12px;
+        bottom: 68px;
+        position: absolute;
+    }
+    #register{
+        left: 460px;
+    }
+    #login{
+        left: 50px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="left">
+                <img src="gymhub.jpg.jpeg" alt="">
+                <div>FITNESS CLUB</div>
+            </div>
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a href="home.html" class="active">HOME</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="membership.html">MEMBERSHIP</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <button class="bt">CONTACT US</button>
+                <button class="bt">EMAIL US</button>
+            </div>
+        </div>
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggel-btn" onclick="login()">LOGIN</button>
+                <button type="button" class="toggel-btn" onclick="register()">RESIGTER</button>
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log in</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="text" class="input-field" placeholder="Enter Id" required>
+                <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">RESIGTER</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById("login");
+        var y=document.getElementById("register");
+        var z=document.getElementById("btn");
+        function register(){
+            x.style.left="-400px";
+            y.style.right="50px";
+            z.style.left="110px";
+        }
+        function login(){
+            x.style.left="50px";
+            y.style.right="450px";
+            z.style.left="0";
+        }
+    </script>
+</body>
+
+</html>
